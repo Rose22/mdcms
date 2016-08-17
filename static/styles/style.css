@@ -1,6 +1,6 @@
 html, body {
-	padding: 0;
-	margin: 0;
+        padding: 0;
+        margin: 0;
     border: 0;
     outline: 0;
 }
@@ -19,9 +19,9 @@ body {
 }
 
 #wrapper {
-	height: 98.3%;
-	background-color: #F9F9F9;
-	margin: 0 auto;
+        height: 98.3%;
+        background-color: #F9F9F9;
+        margin: 0 auto;
 }
 
 #header {
@@ -38,14 +38,12 @@ body {
     color: #fff;
 }
 
-#header a:hover {
-    color: #c853c0;
-}
-
 #menu {
     overflow: auto;
     max-width: 850px;
     white-space: nowrap;
+        float: right;
+        margin-top: -60px;
 }
 
 #menu ul li {
@@ -55,17 +53,17 @@ body {
     background: #dc9cda;
     color: #000;
     font-size: 1.2em;
-    
+
     -webkit-border-radius: 7px;
     -moz-border-radius: 7x;
     border-radius: 7px;
-    
+
     padding: 5px;
     margin-left: 5px;
 }
-
-#content {
-    overflow: hidden;
+#menu li a:hover {
+    background: #D970E3;
+    color: #000;
 }
 
 #footer {
@@ -76,12 +74,13 @@ body {
 }
 
 h2 {
-	margin: 0;
-	color: #CCC;
-	border-bottom: 1px dotted #CCC;
+        margin: 0;
+        color: #CCC;
+        border-bottom: 1px dotted #CCC;
 }
 
 a {
-	text-decoration: none;
-	color: #0055DD;
+        text-decoration: none;
+        color: #777;
 }
+
