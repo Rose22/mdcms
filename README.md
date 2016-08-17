@@ -9,12 +9,12 @@ It uses Markdown-Extra, an extended version of markdown.
 In mdCMS, there is a very simple folder structure. To work on your site, you only need to work with these folders:
 
 - mdcms
-        - content
-        - static
-                - styles
-                - scripts
-                        - include
-                - pics
+    - content
+    - static
+        - styles
+        - scripts
+            - include
+        - pics
 
 You can ignore the index.php, conf.php, and sys files/folders.
 
@@ -30,4 +30,3 @@ You can then start editing your newly created page. Pages use a text format call
 
 To customize the look of your website, you can edit the stylesheet within /static/styles/. You can also add stylesheets to that folder, and they will be automatically included. Stylesheets are written in CSS.
 And to include javascripts into your page, simply place them in /static/scripts/include/
-
