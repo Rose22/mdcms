@@ -1,1 +1,1 @@
-[<h2>mdCMS website</h2>](/)
+<h1>[mdCMS website](/)</h1>
