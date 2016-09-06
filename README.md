@@ -3,6 +3,8 @@ mdCMS is a Content Management System without an administration panel. You simply
 
 It uses Markdown-Extra, an extended version of markdown.
 
+To see it in action, visit [mdcms.twentyroses.nl](http://mdcms.twentyroses.nl)
+
 
 ## How to use
 ### Overview
