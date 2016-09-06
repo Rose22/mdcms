@@ -1,3 +1,6 @@
+/* Feel free to customize this stylesheet to your liking! */
+
+/* Global styling */
 html, body {
     padding: 0;
     margin: 0;
@@ -12,12 +15,25 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* HTML Elements */
+h2 {
+        margin: 0;
+        color: #CCC;
+        border-bottom: 1px dotted #CCC;
+}
 
+a {
+        text-decoration: none;
+        color: #777;
+}
+
+/* Classes */
 .inner {
-    width: 850px;
+    width: 960px;
     margin: 0 auto;
 }
 
+/* Layout parts */
 #wrapper {
         height: 98.3%;
         background-color: #F9F9F9;
@@ -73,13 +89,3 @@ body {
     color: #C0C0C0;
 }
 
-h2 {
-        margin: 0;
-        color: #CCC;
-        border-bottom: 1px dotted #CCC;
-}
-
-a {
-        text-decoration: none;
-        color: #777;
-}
