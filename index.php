@@ -59,15 +59,17 @@ $pages = scandir("content");
 $styles = scandir("static/styles");
 $scripts = scandir("static/scripts/include");
 
+sort($pages);
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <!-- Powered by mdCMS -->
-    
+
     <!-- BEGIN INCLUDE STYLES -->
-    
+
 	<?php
 		foreach ($styles as $stylename) {
 			if (in_array($stylename, ['.', '..'])) {
@@ -79,11 +81,11 @@ $scripts = scandir("static/scripts/include");
 			<?php
 		}
 	?>
-	
+
 	<!-- END INCLUDE STYLES -->
-	
+
 	<!-- BEGIN INCLUDE SCRIPTS -->
-	
+
 	    <?php
 		    foreach ($scripts as $scriptname) {
 			    if (in_array($scriptname, ['.', '..'])) {
@@ -95,7 +97,7 @@ $scripts = scandir("static/scripts/include");
 			    <?php
 		    }
 	    ?>
-	    
+
 	<!-- END INCLUDE SCRIPTS -->
 </head>
 <body>
@@ -103,7 +105,7 @@ $scripts = scandir("static/scripts/include");
         <header id="header">
             <div class="inner">
                 <?php $site->render("header"); ?>
-                
+
                 <nav id="menu">
                     <ul>
                         <?php
@@ -112,12 +114,12 @@ $scripts = scandir("static/scripts/include");
                                 if (in_array($pagename, ['.', '..', 'home.md', '404.md', 'header.md', 'footer.md'])) {
                                     continue;
                                 }
-                                
+
                                 // Do not include directories - allows you to create subdictories to hide pages in
-								if (is_dir($CONFIG['content_dir'].'/'.$pagename)) {
-									continue;
-								}
-                                
+                								if (is_dir($CONFIG['content_dir'].'/'.$pagename)) {
+                									continue;
+                								}
+
                                 $pagename = str_replace(".md", "", $pagename);
                                 ?><li><a href="<?php echo $CONFIG['webroot']; ?>?p=<?php echo $pagename; ?>"><?php echo ucwords(str_replace("_", " ", $pagename)); ?></a></li><?php
                             }
@@ -125,20 +127,19 @@ $scripts = scandir("static/scripts/include");
                     </ul>
                 </nav>
             </div>
-        </div>
+  		</header>
 
-        <div id="content">
-            <div class="inner">
-                <?php $site->render($page); ?>
-            </div>
-        </div>
+  		<div id="content">
+  			<div class="inner">
+  				<?php $site->render($page); ?>
+  			</div>
+  		</div>
 
-        <div id="footer">
-            <div class="inner">
-                <?php $site->render("footer"); ?>
-            </div>
-        </div>
+  		<div id="footer">
+  			<div class="inner">
+  				<?php $site->render("footer"); ?>
+  			</div>
+  		</div>
     </div>
 </body>
 </html>
-
